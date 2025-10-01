@@ -1,0 +1,29 @@
+ rutas 
+  index - home principal
+   -componentes 
+     -calendario
+     -resumen (tiempo restante , tarea , teimpo toral)
+     -marcar(iniciando,completado)
+     -infodel dia
+
+  progrmar- programar
+    -componentes
+        -actividades cotidinas
+               -dia libre
+               -dormir
+               -trabajo
+               -despetar
+               - ejercicios   --------->  todos -- verificar si esta libre en todos 
+               -limpoieza
+               -almuerzo
+               -desayuno
+               -lectura
+        - actividades progrmadas
+          -cursos 
+        - metodos de crear 
+            - crear actividades cotidinas
+            -crear actividades gprogramadas
+        - mostrar info       
+
+
+bd:lunes

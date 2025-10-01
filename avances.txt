@@ -1,0 +1,13 @@
+bien hasta ahora funcioa los botones de los dias pero fal;ta impmentar infoDIa  eso tenermos que ahacer 
+-- hemos avanzado con la parte de dromir  por ahora funciona bien pqero para mayor control y facilidad hay que  rducir  los objeto de actividadriso necesarias y progrmadas  ,faltaria implentar los los metods o funcionde dormir  hasta luego 
+
+en este dia emos avanzado bastante pero seguimo con dformir y hemos encontrado un problemem dia libre porque siquieres reac=siganr otro dia entonces falta validadar , devemos crear otro metodo en ala clase que vfique si esta libre o tiene ocupadas,  
+
+falta modificar areglar el show dias la selecion esta mal y impliemntear trabajr 
+
+
+ya falta implentear la partede actvidad  sobre todo la parte dondese captran los datos de lasl horas y minutos  
+
+hemos terminado con la parte de actividades  necesarias ahora loq ue falta es talves agregar elinar editar y luego la parte de crear otra ctividades ok lestgo
+
+falta implemntar bien la funcion de verificar horas al parecer esta recibiendo mal los minuito sosea el tiempo verifica eso 
