@@ -74,13 +74,13 @@ export function Cronometro({ info }) {
     100;
 
   return (
-    <div className="flex-[2] flex items-center justify-center  gap-30 ">
-      <div className="text-center  flex flex-col">
-        <div className="text-[#646669] text-2xl font-mono mb-4 uppercase tracking-wider">
+    <div className="w-90 md:flex-[2] flex items-center justify-center gap-5 md:gap-30 flex-col md:flex-row p-2">
+      <div className="text-center  flex flex-col ">
+        <div className="text-[#646669] text-sm md:text-2xl font-mono md:mb-4 uppercase tracking-wider">
           tiempo restante
         </div>
         <div>
-          <div className="text-[#e2b714] text-9xl font-bold font-mono tracking-tight mb-2 transition-all duration-300 hover:text-[#f5c842]">
+          <div className="text-[#e2b714] text-5xl md:text-9xl font-bold font-mono tracking-tight mb-2 transition-all duration-300 hover:text-[#f5c842]">
             {formatearTiempo(tiempoRestante)}
           </div>
 
@@ -94,30 +94,32 @@ export function Cronometro({ info }) {
       </div>
 
       {/* Información de la Actividad */}
-      <div className="flex flex-col gap-5">
-        <div className="flex gap-5">
-          <div className="bg-[#2c2e31] rounded-2xl p-8 border-2 border-[#646669] hover:border-[#e2b714] transition-all duration-300">
-            <div className="text-[#646669] text-xl font-mono mb-3 uppercase tracking-wide">
+      <div className="flex flex-col gap-4 md:gap-5 items-center ">
+        <div className="flex gap-2 md:gap-5">
+          <div className="bg-[#2c2e31] rounded-2xl p-2 md:p-8 border-2 border-[#646669] hover:border-[#e2b714] transition-all duration-300">
+            <div className="text-[#646669]  text-sm md:text-xl font-mono mb-3 uppercase tracking-wide">
               actividad
             </div>
-            <div className="text-[#d1d0c5] text-5xl font-bold font-mono capitalize">
+            <div className="text-[#d1d0c5] text-md md:text-5xl font-bold font-mono capitalize">
               {actividadActual.actividad}
             </div>
           </div>
 
-          <div className="bg-[#2c2e31] rounded-2xl p-8 border-2 border-[#646669] hover:border-[#e2b714] transition-all duration-300">
-            <div className="text-[#646669] text-xl font-mono mb-3 uppercase tracking-wide">
+          <div className="bg-[#2c2e31] rounded-2xl p-2 md:p-8 border-2 border-[#646669] hover:border-[#e2b714] transition-all duration-300">
+            <div className="text-[#646669]  text-sm md:text-xl font-mono mb-3 uppercase tracking-wide">
               duración total
             </div>
-            <div className="text-[#d1d0c5] text-5xl font-bold font-mono">
+            <div className="text-[#d1d0c5]  text-md md:text-5xl font-bold font-mono">
               {(actividadActual.horas / 60).toFixed(1)}
-              <span className="text-3xl text-[#646669] ml-2">horas</span>
+              <span className=" text-md md:text-3xl text-[#646669] ml-2">
+                horas
+              </span>
             </div>
           </div>
         </div>
         {/* Información Adicional */}
 
-        <div className="inline-flex items-center gap-4 bg-[#2c2e31] rounded-full px-8 py-4 border border-[#646669]">
+        <div className="inline-flex items-center gap-4 bg-[#2c2e31] rounded-full px-2 md:px-8 py-4 border border-[#646669]">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-[#e2b714] rounded-full animate-pulse"></div>
             <span className="text-[#646669] font-mono text-lg">

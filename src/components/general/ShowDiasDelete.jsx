@@ -68,7 +68,7 @@ export function ShowDiaDelete({ here, verify, setError }) {
           onChange={(e) => addSelecte(e.target.checked, false)}
         />
       </div>
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-5">
         {miArray.map((dia) => {
           const { horas: inicio, minutos: iniMinutes } = calcularHoraFinal(
             dia.actividadesNecesarios[here]?.desde

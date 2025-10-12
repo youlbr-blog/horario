@@ -68,7 +68,7 @@ export function ShowDias({
     !tiempoActividad || !empiezoActividad || !verificarSiHayDiaLibre();
 
   return (
-    <div className="flex flex-col items-center space-y-2 gap-5">
+    <div className="flex flex-col items-center space-y-2 gap-2 md:gap-5">
       <div className="flex gap-5 justify-center items-center">
         <label
           htmlFor="select-all-free"
@@ -86,7 +86,7 @@ export function ShowDias({
           onChange={(e) => addSelecte(e.target.checked, false)}
         />
       </div>
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-5">
         {dataArray.map((dia) => {
           const { horas: inicio, minutos: iniMinutes } = calcularHoraFinal(
             dia.actividadesNecesarios[here]?.desde
@@ -99,7 +99,7 @@ export function ShowDias({
               key={dia.nombre}
               disabled={isDisabled || dia.descanso}
               className={`
-            border rounded-3xl p-4 w-38 h-16 font-mono font-bold text-lg
+            border rounded-xl md:rounded-3xl p-2 md:p-4 w-38  md:h-16 font-mono md:font-bold text-sm md:text-lg
             transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed
             ${
               dia.descanso

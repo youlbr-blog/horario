@@ -46,7 +46,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
   if (dateDia.horasOcupadas?.length <= 0) {
     return (
       <div
-        className={`p-6 min-w-60 ${bgColor} rounded-xl shadow-lg border border-gray-200`}
+        className={`p-2 md:p-6 min-w-60 ${bgColor} rounded-xl shadow-lg border border-gray-200`}
       >
         <div className="text-center">
           <div className="bg-gray-100 rounded-full p-3 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -76,7 +76,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
   return (
     <div
       className={`overflow-hidden   ${bgColor} ${
-        home == true ? "w-1/2 " : "min-w-60 "
+        home == true ? " md:w-1/2 " : "min-w-60 "
       } rounded-xl shadow-lg border border-gray-200`}
     >
       {/* Header mejorado */}
@@ -140,7 +140,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
         <table className="w-full">
           <thead className="bg-white">
             <tr>
-              <th className="px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
+              <th className="px-2 md:px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
                 <div className="flex items-center">
                   <svg
                     className="w-4 h-4 mr-2"
@@ -158,7 +158,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
                   HORARIO
                 </div>
               </th>
-              <th className="px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
+              <th className="px-2 md:px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
                 <div className="flex items-center">
                   <svg
                     className="w-4 h-4 mr-2"
@@ -176,7 +176,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
                   ACTIVIDAD
                 </div>
               </th>
-              <th className="px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
+              <th className="px-2 md:px-4 py-3 text-left text-sm font-bold text-gray-800 tracking-wider">
                 <div className="flex items-center">
                   <svg
                     className="w-4 h-4 mr-2"
@@ -212,7 +212,7 @@ export function InfoDia({ dateDia, bgColor, home }) {
                 >
                   <td className="px-2 py-2 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="bg-blue-100 rounded-lg px-3 py-1 group-hover:bg-blue-200 transition-colors">
+                      <div className="bg-blue-100 rounded-lg px-1 md:px-3 py-1 group-hover:bg-blue-200 transition-colors">
                         <span className="text-sm font-bold text-blue-800">
                           {horaInicio}:{minutosInicio} - {horaFinal}:
                           {minutosFinal}

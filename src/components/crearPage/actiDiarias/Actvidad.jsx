@@ -140,29 +140,29 @@ export function Actvidad({ actividad }) {
   };
 
   return (
-    <div className="flex flex-col gap-5 p-6 bg-white rounded-2xl shadow-xl border border-gray-700 max-w-full mx-auto">
+    <div className="flex flex-col gap-2 p-2 md:p-6 bg-white rounded-2xl shadow-xl border border-gray-700 max-w-full mx-auto">
       {/* Encabezado y botón de cerrar */}
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold   text-gray-900 font-mono">
+        <h2 className=" text-md md:text-2xl font-bold   text-gray-900 font-mono">
           Horas para {actividad}
         </h2>
         <button
           onClick={closeModal}
           className="text-gray-400 hover:text-gray-900 transition-colors duration-200"
         >
-          <X className="w-10 h-10" />
+          <X className=" w-6 md:w-10  h-6 md:h-10" />
         </button>
       </div>
 
       {/* Contenedor para seleccionar horas */}
-      <div className="flex  justify-center gap-6">
+      <div className="flex  justify-center items-center gap-2 md:gap-6 ">
         {/* Campo 'Desde' */}
         <div className="flex flex-col">
           <label
             htmlFor="desde"
-            className="mb-2 text-lg font-medium text-gray-400 font-mono"
+            className="md:mb-2 text-sm md:text-lg font-medium text-gray-400 font-mono"
           >
-            Hora de {actividad}
+            INICIO
           </label>
           <input
             id="desde"
@@ -170,8 +170,8 @@ export function Actvidad({ actividad }) {
             list="horas-exactas"
             name={horaActivdadEmpezar}
             onChange={(e) => setHoraActivdadEmpezar(e.target.value)}
-            className="w-full p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
-                       focus:outline-none focus:ring-0 focus:ring-none font-mono text-2xl"
+            className="w-full p-1 md:p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
+                       focus:outline-none focus:ring-0 focus:ring-none font-mono text-md md:text-2xl"
           />
           <datalist id="horas-exactas">
             <option value="00:00"></option>
@@ -205,9 +205,9 @@ export function Actvidad({ actividad }) {
         <div className="flex flex-col">
           <label
             htmlFor="hasta-horas"
-            className="mb-2 text-lg font-medium text-gray-400 font-mono"
+            className="md:mb-2 text-sm md:text-lg font-medium text-gray-400 font-mono"
           >
-            Horas
+            FINAL
           </label>
           <input
             id="hasta-horas"
@@ -216,8 +216,8 @@ export function Actvidad({ actividad }) {
             list="horas-duracion"
             value={tiempoHoras}
             onChange={(e) => verifyHora(e, "horas")}
-            className="w-full p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
-       focus:outline-none focus:ring-2 focus:ring-white font-mono text-2xl"
+            className="w-full p-1 md:p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
+       focus:outline-none focus:ring-2 focus:ring-white font-mono tex-md md:text-2xl"
           />
           <datalist id="horas-duracion">
             <option value="1 hora">1 hora</option>
@@ -239,9 +239,9 @@ export function Actvidad({ actividad }) {
         <div className="flex flex-col">
           <label
             htmlFor="hasta-minutes"
-            className="mb-2 text-lg font-medium text-gray-400 font-mono"
+            className="md:mb-2 text-sm md:text-lg font-medium text-gray-400 font-mono"
           >
-            Minutos
+            FINAL
           </label>
           <input
             id="hasta-minutes"
@@ -250,8 +250,8 @@ export function Actvidad({ actividad }) {
             list="horas-duracion-minutes"
             value={tiempoMinutos}
             onChange={(e) => verifyHora(e, "minutos")}
-            className="w-full p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
-       focus:outline-none focus:ring-2 focus:ring-white font-mono text-2xl"
+            className="w-full p-1 md:p-3 bg-gray-300 text-gray-900 rounded-lg shadow-inner border border-none
+       focus:outline-none focus:ring-2 focus:ring-white font-mono text-md md:text-2xl"
           />
           <datalist id="horas-duracion-minutes">
             <option value="10 minutos">10 minutos</option>
@@ -269,9 +269,9 @@ export function Actvidad({ actividad }) {
       </div>
 
       <div
-        className={`w-1/2 h-4 m-auto flex justify-center items-center p-2 text-red-500 text-md font-bold`}
+        className={`w-1/2 h-4 m-auto flex justify-center items-center p-2 text-red-500 text-sm md:text-md md:font-bold leading-3 md:leading-none`}
       >
-        <span>{error}</span>
+        <span className="text-center">{error}</span>
       </div>
 
       {/* Mostrar tiempo total calculado */}

@@ -15,21 +15,19 @@ export function Info() {
   ];
 
   return (
-    <div className=" flex flex-col gap-10 j p-5 ">
-      <section className="flex min-w-7xl flex-wrap w-full gap-2 ">
-        {dataArray.map(
-          (
-            ele,
-            index // Añadimos 'index' para obtener la posición
-          ) => (
-            <InfoDia
-              key={ele.nombre} // Usar ele.nombre para la key, ya que ele.name no existe
-              dateDia={ele}
-              bgColor={colors[index % colors.length]} // Asignamos un color cíclicamente
-            />
-          )
-        )}
-      </section>
-    </div>
+    <section className=" flex flex-col md:flex-row  w-full gap-2 ">
+      {dataArray.map(
+        (
+          ele,
+          index // Añadimos 'index' para obtener la posición
+        ) => (
+          <InfoDia
+            key={ele.nombre} // Usar ele.nombre para la key, ya que ele.name no existe
+            dateDia={ele}
+            bgColor={colors[index % colors.length]} // Asignamos un color cíclicamente
+          />
+        )
+      )}
+    </section>
   );
 }

@@ -29,7 +29,7 @@ export function CardActividades({ children, cardID, name, sistema }) {
 
   return (
     <div
-      className={`min-w-90 h-25 relative flex flex-col justify-center  bg-gray-900 py-2 px-4 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 
+      className={`md:min-w-90 h-25 relative flex flex-col justify-center  bg-gray-900 py-2 px-4 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 
           ${
             isDisabled
               ? "opacity-50 cursor-not-allowed border-gray-600"

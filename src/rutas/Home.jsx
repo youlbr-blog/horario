@@ -13,14 +13,16 @@ export function HomePage() {
   }
 
   return (
-    <section className="bg-[#2c2e31] h-screen flex flex-col gap-20 pt-20 items-center w-full">
-      <div className=" flex gap-10 w-full px-8 ">
+    <section className="bg-[#2c2e31]  flex flex-col gap-5 md:gap-20 pt-20 items-center w-full">
+      <div className=" flex flex-col md:flex-row gap-10 w-full  md:px-8 ">
         <Calendario />
         <Cronometro info={date} />
       </div>
 
-      <div className="w-full flex   flex-col gap-10 p-4 ">
-        <h2 className="text-4xl text-gray-100  ">Actividades para el DIA</h2>
+      <div className="w-full flex   flex-col gap-5 md:gap-10 p-4 ">
+        <h2 className="text-xl md:text-4xl text-gray-100  ">
+          Actividades para este dia
+        </h2>
         <InfoDia dateDia={date} home={true} />
       </div>
     </section>

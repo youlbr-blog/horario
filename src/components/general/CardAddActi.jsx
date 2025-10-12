@@ -32,7 +32,7 @@ export function CardAddActividades() {
     nombreActividad.trim().length > 15;
 
   return (
-    <div className="bg-gray-900 min-w-90 h-20 flex items-center gap-2 rounded-2xl p-4">
+    <div className="bg-gray-900 md:min-w-90 h-20 flex items-center gap-2 rounded-2xl p-4">
       <input
         id="actividad"
         type="text"
@@ -40,7 +40,7 @@ export function CardAddActividades() {
         onChange={(e) => setNombreActividad(e.target.value)}
         onKeyDown={handleKeyPress}
         placeholder="Crear Nueva actividad..."
-        className="flex-1 px-2 py-3 text-lg font-bold border border-transparent bg-gray-700 text-gray-100 placeholder-gray-400 rounded focus:outline-none focus:transparent focus:transparent "
+        className="flex-1 px-2 py-3 text-sm md:text-lg font-bold border border-transparent bg-gray-700 text-gray-100 placeholder-gray-400 rounded focus:outline-none focus:transparent focus:transparent "
       />
       <button
         onClick={handleAceptar}

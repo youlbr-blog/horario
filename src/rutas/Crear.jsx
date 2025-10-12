@@ -66,7 +66,7 @@ export function CrearPage() {
             </h2>
           </div>
 
-          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
             {/* Día Libre Card */}
             <CardActividades cardID="diaLibre" name="Día Libre">
               <DiasSemana />
@@ -91,8 +91,8 @@ export function CrearPage() {
 
         {/* Información Detallada */}
         <section className="mb-10">
-          <div className="bg-[#2c2e31] rounded-lg border border-[#646669] p-6">
-            <h2 className="text-2xl font-bold text-[#e2b714] mb-6">
+          <div className="bg-[#2c2e31] rounded-lg border border-[#646669] p-2 md:p-6">
+            <h2 className="text-2xl font-bold text-[#e2b714] mb-2 md:mb-6">
               Información detallada de las actividades programadas
             </h2>
             <Info />
@@ -100,20 +100,20 @@ export function CrearPage() {
         </section>
 
         {/* Botón Guardar */}
-        <div className="flex justify-center md:justify-end gap-10">
+        <div className="flex justify-center md:justify-end  gap-5 md:gap-10 px-2">
           <button
             onClick={savedAll}
-            className="group bg-[#e2b714] hover:bg-[#c9a212] text-[#323437] font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:scale-105"
+            className="group bg-[#e2b714] hover:bg-[#c9a212] text-[#323437] font-bold py-2 md:py-4 px-8 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            <Save className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-lg">Guardar Cambios</span>
+            <Save className="w-10  h-10 md:w-5 md:h-5 group-hover:rotate-12 transition-transform duration-300" />
+            <span className=" text-sm md:text-lg">Guardar Cambios</span>
           </button>
           <button
             onClick={reset}
-            className="group bg-[#e2b714] hover:bg-[#c9a212] text-[#323437] font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:scale-105"
+            className="group bg-[#e2b714] hover:bg-[#c9a212] text-[#323437] font-bold py-2 md:py-4 px-8 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            <Trash2Icon className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-lg">Resetear Todo</span>
+            <Trash2Icon className="w-10  h-10 md:w-5 md:h-5 group-hover:rotate-12 transition-transform duration-300" />
+            <span className="text-sm md:text-lg">Resetear Todo</span>
           </button>
         </div>
       </div>

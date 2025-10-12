@@ -29,10 +29,10 @@ export function Delete({ actividad }) {
   };
 
   return (
-    <div className="flex flex-col gap-5 p-6 bg-white rounded-2xl shadow-xl border border-gray-700 max-w-full mx-auto">
+    <div className="flex flex-col  gap-2 md:gap-5 p-6 bg-white rounded-2xl shadow-xl border border-gray-700 max-w-full mx-auto">
       {/* Encabezado y botón de cerrar */}
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold   text-gray-900 font-mono">
+        <h2 className=" text-sm md:text-2xl font-bold   text-gray-900 font-mono">
           Eliminar actividades de {actividad}
         </h2>
         <button
@@ -44,12 +44,6 @@ export function Delete({ actividad }) {
       </div>
 
       {/* Contenedor para seleccionar horas */}
-
-      <div
-        className={`w-1/2 h-4 m-auto flex justify-center items-center p-2 text-red-500 text-md font-bold`}
-      >
-        <span>{error}</span>
-      </div>
 
       {/* Contenedor de días */}
       <ShowDiaDelete here={actividad} verify={verify} setError={setError} />
